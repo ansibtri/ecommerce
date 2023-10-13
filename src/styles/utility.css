@@ -97,6 +97,23 @@
     align-self: stretch;
 }
 /* ------------------------------ */
+/* place-items properties */
+.place-items-auto{
+    place-items: auto;
+}
+.place-items-start{
+    place-items: flex-start;
+}
+.place-items-end{
+    place-items: flex-end;
+}
+.place-items-center{
+    place-items: center;
+}
+.place-items-stretch{
+    place-items: stretch;
+}
+/* ------------------------------ */
 /* gap properties */
 /* ------------------------------ */
 .gap-0{

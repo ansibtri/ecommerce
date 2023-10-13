@@ -12,6 +12,12 @@
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255, .3);
+
+    --background-color-success: #dfffe6;
+    --background-color-error: #ffe4e6;
+    --background-color-warning: #fff1c6;
+    --background-color-info: #dce0ff;
+    --background-color-success-2: #9cffc5;
     --white-color: #FFF;
     --font-light-color: #a4acc4;
     --font-dark-color: #313131;
@@ -21,6 +27,16 @@
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
     --scrollbar-hover-color: #6b6b6b;
+   
+
+    --color-success: #026118;
+    --color-error: #f78b96;
+    --color-warning: #f5bb0f;
+    --color-info: #8f8df7;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --color-body: #212529;
+    /* font sizes */
     --nav-size: 60px;
     --border-bottom: 1px solid #2e344e;
     --border-bottom-2: 1px solid #222831;
@@ -45,6 +61,13 @@
     --font-size-14: 3.6rem;
     --font-size-15: 3.8rem;
     --font-size-16: 4rem;
+
+    /* letter-spacing */
+    --letter-spacing: 1px;
+    --letter-spacing-2: 2px;
+    --letter-spacing-3: 3px;
+    --letter-spacing-4: 4px;
+    --letter-spacing-5: 5px;
 
 }
 /* body{
