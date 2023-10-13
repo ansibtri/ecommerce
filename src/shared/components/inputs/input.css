@@ -1,0 +1,27 @@
+.form-input label,
+.form-input input{
+    margin: 4px 0;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    color: #413f3f;
+}
+.form-input label{
+    color: #4d4b4b;
+}
+.form-input input{
+    border:1px solid #8a8888;
+    padding: 10px;
+    outline:none;
+    width: 100%;
+}
+.submit-btn{
+    background-color: rgb(76, 76, 212);
+    border: none;
+    outline:none;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.topbar div{
+    font-family: 'Lato', sans-serif;
+    border-bottom: 1px solid rgb(243, 243, 243);
+}
+.topbar div ul li,
+.topbar div ul li a{
+    color: var(--font-dark-color);
+}
+
+.social-links li{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin:auto;
+    overflow: hidden;
+}
+.social-links li a{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 650px) {
+    .topbar{
+        display:none;
+    }
+}
