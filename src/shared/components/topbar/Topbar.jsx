@@ -1,7 +1,6 @@
 import React from 'react';
 import './topbar.css';
 const Topbar = () => {
-    console.log("hello");
     return (
         <div className='topbar'>
             <div className="display-flex flex-row justify-content-space-around align-items-center p-2">

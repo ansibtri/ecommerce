@@ -1,6 +1,5 @@
 .btn{
     font-size: var(--font-size-1);
-    padding: 10px 15px;
     transition: all 0.3s ease-in-out;
 }
 .btn-primary{
@@ -9,7 +8,7 @@
     border: 1px solid var(--primary-color);
 }
 .btn-primary:hover{
-    color: var(--dark-color);
+    color: var(--primary-color);
     background-color: var(--white-color);
 }
 .btn-secondary{
