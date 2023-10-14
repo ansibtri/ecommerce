@@ -5,14 +5,15 @@
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     /* colors */
-    --primary-color: #007bff;
+    --primary-color: #000000;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
     --background-dark-grey: #191D2B;
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255, .3);
-
+    
+    --primary-color-blue: #007bff;
     --background-color-success: #dfffe6;
     --background-color-error: #ffe4e6;
     --background-color-warning: #fff1c6;
@@ -86,4 +87,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-
+button{
+    cursor:pointer;
+}
