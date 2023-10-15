@@ -1,0 +1,5 @@
+.notice-bar{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 30px;
+}

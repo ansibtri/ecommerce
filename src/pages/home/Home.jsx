@@ -1,9 +1,9 @@
-import React from 'react'
-import Topbar from '../../shared/components/topbar/Topbar'
+import Herosection from './components/herosection/Herosection'
+import './home.css'
 const Home = () => {
   return (
     <>
-    <Topbar/>
+    <Herosection/>
     </>
   )
 }

@@ -1,0 +1,11 @@
+
+.social-links li{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin:auto;
+    overflow: hidden;
+}
+.social-links li a{
+    font-size: 1.2rem;
+}

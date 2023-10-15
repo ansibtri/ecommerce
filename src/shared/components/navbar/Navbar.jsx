@@ -1,32 +1,73 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 import Button from '../button/Button';
 const Navbar = () => {
   const location = useLocation();
-  console.log(location.pathname)
+  const [isActive, setIsActive] = useState(false);
+  console.log(isActive);
   return (
-    <nav className='display-flex flex-row justify-content-space-around p-2 nav'>
-      <div className="nav-logo">
-        <a href="#" className="brand-logo">OnlinePasal</a>
-      </div>
-      <div className="w-25 display-flex flex-row align-items-center nav-wrapper ">
-        <ul className="display-flex flex-row justify-content-space-between w-100 align-items-center right hide-on-med-and-down">
-          <li><Link to="/" className={location.pathname === "/" ? 'active':null}>Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </div>
-      <div className="nav-wrapper__button display-flex flex-row gap-1">
-        <a href="#" className="">
-          <Button type="action" text="Shop" classes="btn-primary-outline"/>
-        </a>
-        <a href="#" className="">
-          <Button type="action" text="Account" classes="btn-primary"/>
-        </a>
+    <nav className='nav'>
+      <div className="navbar">
+        <div className="navbar-logo">
+          <Link to="#" className="brand-logo">OnlinePasal</Link>
+        </div>
+        <div className={isActive ? "nav-wrapper active": "nav-wrapper"}>
+          <div className="nav-list">
+            <ul className="nav-list-menu">
+              <li><Link to="/" className={location.pathname === "/" ? 'active' : null}>Home</Link></li>
+              <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null}>Shop</Link></li>
+              <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null}>About</Link></li>
+              <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null}>Contact</Link></li>
+            </ul>
+          </div>
+          <div className="nav-wrapper__button display-flex flex-row gap-2">
+            <a href="#" className="">
+              <Button type="action" text="Shop" classes="btn-primary-outline" />
+            </a>
+            <a href="#" className="">
+              <Button type="action" text="Account" classes="btn-primary" />
+            </a>
+            </div>
+        </div>
+        <div className="nav-menu" onClick={()=>setIsActive(!isActive)}>
+          <div className="nav-menu-item"></div>
+          <div className="nav-menu-item"></div>
+          <div className="nav-menu-item"></div>
+        </div>
       </div>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
+
+
+{/* <div className="navbar active">
+        <div className="nav-logo ">
+          <Link to="#" className="brand-logo">OnlinePasal</Link>
+        </div>
+        <div className="nav_wrapper">
+          <div className="display-flex flex-row align-items-center nav-list">
+            <ul className="display-flex flex-row justify-content-space-between w-100 align-items-center right hide-on-med-and-down">
+              <li><Link to="/" className={location.pathname === "/" ? 'active' : null}>Home</Link></li>
+              <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null}>Shop</Link></li>
+              <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null}>About</Link></li>
+              <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null}>Contact</Link></li>
+            </ul>
+          </div>
+          <div className="nav-wrapper__button display-flex flex-row gap-2">
+            <a href="#" className="">
+              <Button type="action" text="Shop" classes="btn-primary-outline" />
+            </a>
+            <a href="#" className="">
+              <Button type="action" text="Account" classes="btn-primary" />
+            </a>
+          </div>
+        </div>
+        <div className="nav-menu" onClick={()=>setIsActive(!isActive)}>
+          <div className="nav-menu-item"></div>
+          <div className="nav-menu-item"></div>
+          <div className="nav-menu-item"></div>
+        </div>
+      </div> */}

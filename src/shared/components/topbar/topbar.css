@@ -1,4 +1,9 @@
+.topbar{
+    width: 100%;
+}
 .topbar div{
+    padding-left: 6rem;
+    padding-right: 6rem;
     font-family: 'Lato', sans-serif;
     border-bottom: 1px solid rgb(243, 243, 243);
 }
@@ -7,17 +12,13 @@
     color: var(--font-dark-color);
 }
 
-.social-links li{
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    margin:auto;
-    overflow: hidden;
-}
-.social-links li a{
-    font-size: 1.2rem;
-}
 
+@media screen and (max-width: 900px) {
+    .topbar div{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
 @media screen and (max-width: 650px) {
     .topbar{
         display:none;

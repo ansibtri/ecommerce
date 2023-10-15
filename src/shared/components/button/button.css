@@ -1,5 +1,4 @@
 .btn{
-    font-size: var(--font-size-1);
     transition: all 0.3s ease-in-out;
 }
 .btn-primary{

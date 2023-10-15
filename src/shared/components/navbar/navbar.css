@@ -1,15 +1,41 @@
+.nav{
+    display:block;
+}
+.navbar{
+    padding: 10px 6rem;
+    display:grid;
+    grid-template-columns: 1.3fr 2fr;
+}
 
-.nav-logo a{
+.navbar-logo a{
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-dark);
     text-decoration: none;
 }
-.nav-wrapper ul li{
+.nav-wrapper{
+    display:grid;
+    grid-template-columns: 1.9fr .5fr;
+    transition: all 0.6s ease-in-out;
+}
+.nav-list{
+    display:flex;
+    justify-content: space-between;
+    align-content:center;
+}
+.nav-list ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-list ul li{
     width: 100%;
     text-align: center;
+    margin: auto 8px;
 }
-.nav-wrapper ul li a{
+.nav-list ul li a{
+    text-align: left;
     font-size:.9rem;
     width: 100%;
     color: var(--font-dark-color);
@@ -18,11 +44,113 @@
     text-transform: uppercase;
     padding: 5px;
 }
-.nav-wrapper ul li a.active{
+.nav-list ul li a.active{
     border-bottom: 2px solid rgb(243, 78, 78);
 
 }
+.nav-wrapper__button{
+    justify-content: end;
+}
+
 .nav-wrapper__button a button{
     border-radius: 20px;
     padding: 8px 20px;
+    font-size: var(--font-size-1);
+}
+
+.nav-wrapper.active {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    width: 100%;
+}
+.nav-wrapper.active .nav-list{
+    flex-direction: column;
+}
+.nav-wrapper.active .nav-list .nav-list-menu{
+    flex-direction: column;
+    align-items: start;
+}
+.nav-wrapper.active .nav-list .nav-list-menu li{
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+.nav-wrapper.active .nav-list .nav-list-menu li:not(:last-child){
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+.nav-wrapper.active .nav-list .nav-list-menu li a{
+    height: 100%;
+    display: block;
+    padding: 10px 30px;
+}
+.nav-wrapper.active .nav-list .nav-list-menu li a:hover{
+    background-color: rgba(228, 228, 228, 0.781);
+}
+.nav-wrapper.active .nav-list .nav-list-menu li a.active{
+    border:none;
+    background-color: rgba(228, 228, 228, 0.781);
+}
+
+
+
+.nav-menu{
+    display: none;
+    width: 100%;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: white;
+    cursor:pointer;
+}
+.nav-menu-item{
+    border-radius: 10px;
+    background-color: var(--color-dark);
+    height: 7px;
+    width: 7px;
+    margin: 2px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav_wrapper{
+        width: 71%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 10px 5rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .navbar{
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-wrapper{
+        display: none;
+    }
+    .nav-wrapper.active{
+        grid-area: 4 / span 6;
+    }
+    .nav-logo a{
+        font-size: 1.5rem;
+    }
+    .nav_wrapper{
+        display:flex;
+    }
+    .nav-menu{
+        display:flex;
+    }
+    .nav-wrapper__button{
+        margin: 10px 30px;
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbar{
+        padding: 10px 2rem;
+    }
 }

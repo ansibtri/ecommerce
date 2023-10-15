@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Ananda Black';
+    src: url('./fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf');
+}
+.herosection{
+    background: var(--hero-image) no-repeat left center/cover;
+    padding:0  3.5rem ;
+    grid-template-columns: repeat(2,1fr);
+}
+.herosection__content{
+    height: 100%;
+}
+.herosection__content-tagline{
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.herosection__content-title{
+    font-family: 'Ananda Black';
+    font-size: 3rem;
+    color: #212122;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+.herosection__content-tagline-2{
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    
+    color: #000;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 7px rgba(0,0,0,.5);
+    text-transform: uppercase;
+}
+.herosection__description{
+    letter-spacing: 2px;
+    color: #323233;
+    font-size: 1rem;
+}
+.herosection__button{
+    padding: 8px 20px;
+    font-size: 1.3rem;
+}
+.herosection__button:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+    transform: scale(1.1);
+}
+.herosection__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.herosection__bottom-content{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #161616;
+    font-family: 'Lato', sans-serif;
+}
+.herosection__bottom-content span{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #161616;
+    font-family: 'Lato', sans-serif;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .herosection{
+        background: var(--hero-image) no-repeat center top / cover;
+        grid-template-columns: 1.5fr .5fr;
+    }
+}
+@media screen and (max-width: 900px) {
+    .herosection{
+        padding:0  2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .herosection{
+        background: var(--hero-image) no-repeat center top / cover;
+        grid-template-columns: 1fr;
+    }
+    .herosection__content{
+        padding: 2rem 3rem !important;
+    }
+    .herosection__bottom{
+        display: block;
+    }
+    .herosection__button{
+        width: 100%;
+    }
+    .herosection__bottom-content{
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .herosection{
+        padding:0  1rem ;
+        background: var(--hero-image) no-repeat 60% center/ cover;
+        grid-template-columns: 1fr;
+    }
+    .herosection__content{
+        padding: 2rem 1rem !important;
+    }
+    .herosection__content-tagline{
+        font-size: .8rem;
+    }
+    .herosection__content-title{
+        font-size: 2rem;
+    }
+    .herosection__content-tagline-2{
+        font-size: 4rem;
+    }
+    .herosection__description{
+        letter-spacing: 1px;
+        font-size: .9rem;
+    }
+    .herosection__button{
+        padding: 7px 15px;
+        font-size: 1rem;
+    }
+    .herosection__bottom-content{
+        font-size: 1rem;
+    }
+    .herosection__bottom-content span{
+        font-size: 1.4rem;
+    }
+}
