@@ -1,0 +1,31 @@
+.features__service{
+    padding: 2rem 6rem;
+}
+.features__service--item:not(:last-child){
+    padding: .8rem;
+    color: #1b1b1b;
+    border-right: 1px solid #7c7b7b;
+}
+.features__service--item{
+    color: #535353;
+}
+.features__service--item-icon{
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .features__service{
+        padding: 2rem 5rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .features__service{
+        padding: 2rem 4rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .features__service{
+        padding: 2rem 3rem;
+    }
+}

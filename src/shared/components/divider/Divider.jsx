@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Divider = ({classes}) => {
+const Divider = ({classes,img}) => {
     return (
-        <div className={"divider "+classes}>
-            <img src="./assets/divider-removebg-preview.png" alt="" srcSet="" />
+        <div className={"divider "+classes} >
+            <img src={"./assets/divider-"+img+".png"} alt="" srcSet="" />
         </div>
     )
 }

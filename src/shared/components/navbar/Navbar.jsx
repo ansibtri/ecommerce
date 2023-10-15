@@ -5,7 +5,6 @@ import Button from '../button/Button';
 const Navbar = () => {
   const location = useLocation();
   const [isActive, setIsActive] = useState(false);
-  console.log(isActive);
   return (
     <nav className='nav'>
       <div className="navbar">
