@@ -13,7 +13,7 @@ const Herosection = () => {
                 <Divider classes="mb-4"/>
                 <div className="gap-5 herosection__bottom">
                     <p className="herosection__bottom-content">starting at <span>$199</span></p>
-                <button className="btn btn-primary herosection__button m">SHOP NOW</button>
+                <button className="btn btn-primary herosection__button">SHOP NOW</button>
                 </div>
             </div>
         </div>
