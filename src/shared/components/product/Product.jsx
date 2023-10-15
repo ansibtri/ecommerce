@@ -1,13 +1,14 @@
 import React from 'react'
 import './product.css'
+import { Link } from 'react-router-dom'
 const Product = ({product}) => {
-  console.log(product)
   return (
     <>
     <div className="product">
         <div className="product__image">
             <img src={product["product_image"]} alt="product" />
         </div>
+        <Link to={`/product/${product["product_id"]}`} className="product__name">
         <div className="product__info text-center">
             <p className='product__info--category'>{product["product_category"]}</p>
             <h2 className='product__info--title'>{product["product_name"]}</h2>
@@ -24,6 +25,7 @@ const Product = ({product}) => {
             </div>
             <button className='btn btn-primary px-4 py-2 product__cart--button'>Add to cart</button>
         </div>
+          </Link>
     </div>
     </>
   )

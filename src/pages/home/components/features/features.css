@@ -3,7 +3,7 @@
 }
 .features__service--item:not(:last-child){
     padding: .8rem;
-    color: #1b1b1b;
+    color: #3b3b3b;
     border-right: 1px solid #7c7b7b;
 }
 .features__service--item{

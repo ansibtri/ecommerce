@@ -9,24 +9,52 @@ import Products from '../../data/Products';
 const Home = () => {
   return (
     <>
-      <Herosection />
-      <Herocategory />
-      {window.innerWidth > 800 ? <Features /> : null}
-      <div className="product__container">
-        <div className="product__container__head">
-          <Divider img="sm"/>
-          <h2 className='text-center'>NEW ARRIVALS</h2>
-          <Divider classes={"text-right"} img="sm"/>
+      <main>
+        {/* Hero section  */}
+        <Herosection />
+
+        {/* Hero category  */}
+        <Herocategory />
+
+        {/* Features section will only be included if device is of greater size than 800px  */}
+        {window.innerWidth > 800 ? <Features /> : null}
+
+        {/* product container for new arrivals */}
+        <div className="product__container">
+          <div className="product__container__head">
+            <Divider img="sm" />
+            <h2 className='text-center'>NEW ARRIVALS</h2>
+            <Divider classes={"text-right"} img="sm" />
+          </div>
+          <div className="product__container__body">
+            {Products.map((product, index) => {
+              if (product['product_sale'] !== 0) {
+                return <Product key={index} product={product} />
+              }
+              return <Badge key={index} Component={<Product product={product} />} />
+            })}
+          </div>
         </div>
-        <div className="product__container__body">
-          {Products.map((product, index) => {
-            if(product['product_sale'] === 0){
-              return <Product key={index} product={product}/>
-            }
-            return <Badge key={index} Component={<Product product={product}/>} />
-          })}
+
+        {/* product container for sales products */}
+        <div className="product__container">
+          <div className="product__container__head">
+            <Divider img="sm" />
+            <h2 className='text-center'>SALe products</h2>
+            <Divider classes={"text-right"} img="sm" />
+          </div>
+          <div className="product__container__body">
+            {Products.map((product, index) => {
+              if (product['product_sale'] !== 0) {
+                return <Badge key={index} Component={<Product product={product} />} />
+              }
+              if (index === 4) {
+                return;
+              }
+            })}
+          </div>
         </div>
-      </div>
+      </main>
     </>
   )
 }
