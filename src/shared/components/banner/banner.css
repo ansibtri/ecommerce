@@ -1,0 +1,16 @@
+.page-banner{
+    background: var(--page-banner-img) no-repeat center top / cover;
+    padding: 3rem 0;
+}
+.page-banner-content hr{
+    width: 400px;
+    background-color: #383838;
+}
+.page-banner-content h2{
+    font-size: 3rem;
+    color: #fff;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}

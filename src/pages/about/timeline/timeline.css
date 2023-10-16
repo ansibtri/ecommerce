@@ -1,0 +1,136 @@
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container {
+    /* background-color: rgba(26, 25, 25, 0.3); */
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: #ffffff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 1px 1px 80px 10px rgba(70, 69, 69, 0.1),
+        -1px -1px 80px 10px rgba(70, 69, 69, 0.1);
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.right-container img {
+    left: -20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #cecece;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+.text-box p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.left-container-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ffffff;
+    left: 100%;
+    top: 28px;
+}
+
+.right-container-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ffffff;
+    right: 100%;
+    top: 28px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        margin: 50px;
+    }
+
+    .container {
+        padding: 10px 0 10px 50px;
+        width: 100%;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .container img {
+        position: absolute;
+        width: 40px;
+        border-radius: 50%;
+        left: -20px;
+        top: 32px;
+        z-index: 10;
+    }
+
+    .right-container img {
+        left: -20px;
+    }
+
+    .timeline::after {
+        left: 0;
+    }
+
+    .left-container-arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #ffffff;
+        left: -15px;
+        transform: rotate(180deg);
+    }
+}

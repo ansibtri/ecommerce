@@ -1,0 +1,10 @@
+.about-us__title{
+    font-size: 2rem;
+    text-align:center;
+    font-family: 'Poppins', sans-serif;
+    color: #242424;
+    text-transform: uppercase;
+}
+.about-us__title h2{
+    padding: 20px;
+}

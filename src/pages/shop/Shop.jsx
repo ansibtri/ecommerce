@@ -6,9 +6,9 @@ import ProductsData from '../../data/Products';
 import Product from '../../shared/components/product/Product';
 import Badge from '../../shared/components/badge/Badge';
 const Shop = () => {
-  console.log(ProductsData)
   return (
     <>
+    <main>
     <Banner />
     <section>
       <div className="shop-section">
@@ -24,6 +24,7 @@ const Shop = () => {
       </div>
       </div>
     </section>
+    </main>
     </>
   )
 }

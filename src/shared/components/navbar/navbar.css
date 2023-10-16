@@ -4,7 +4,7 @@
 .navbar{
     padding: 10px 6rem;
     display:grid;
-    grid-template-columns: 1.3fr 2fr;
+    grid-template-columns: 1.4fr 2.6fr;
 }
 
 .navbar-logo a{
