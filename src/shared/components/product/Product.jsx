@@ -8,10 +8,11 @@ const Product = ({product}) => {
         <div className="product__image">
             <img src={product["product_image"]} alt="product" />
         </div>
-        <Link to={`/product/${product["product_id"]}`} className="product__name">
         <div className="product__info text-center">
-            <p className='product__info--category'>{product["product_category"]}</p>
+            <Link to="/shop" className='product__info--category'>{product["product_category"]}</Link>
+        <Link to={`/product/${product["product_id"]}`} className="product__name">
             <h2 className='product__info--title'>{product["product_name"]}</h2>
+              </Link>
             <div className='product__price'>
                 {(product["product_sale"] === 0) ? 
                 <div className='product__price'>
@@ -23,9 +24,8 @@ const Product = ({product}) => {
                   </div>
                 }
             </div>
-            <button className='btn btn-primary px-4 py-2 product__cart--button'>Add to cart</button>
+            <button className='btn btn-primary px-4 py-3 product__cart--button' onClick={()=>{console.log("Added to cart")}}>Add to cart</button>
         </div>
-          </Link>
     </div>
     </>
   )

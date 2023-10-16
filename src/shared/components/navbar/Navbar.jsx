@@ -9,9 +9,9 @@ const Navbar = () => {
     <nav className='nav'>
       <div className="navbar">
         <div className="navbar-logo">
-          <Link to="#" className="brand-logo">OnlinePasal</Link>
+          <Link to="/" className="brand-logo">OnlinePasal</Link>
         </div>
-        <div className={isActive ? "nav-wrapper active": "nav-wrapper"}>
+        <div className={isActive ? "nav-wrapper active" : "nav-wrapper"}>
           <div className="nav-list">
             <ul className="nav-list-menu">
               <li><Link to="/" className={location.pathname === "/" ? 'active' : null}>Home</Link></li>
@@ -21,15 +21,15 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="nav-wrapper__button display-flex flex-row gap-2">
-            <a href="#" className="">
+            <Link to="/shop" className="">
               <Button type="action" text="Shop" classes="btn-primary-outline" />
-            </a>
-            <a href="#" className="">
+            </Link>
+            <Link to="/account" className="">
               <Button type="action" text="Account" classes="btn-primary" />
-            </a>
-            </div>
+            </Link>
+          </div>
         </div>
-        <div className="nav-menu" onClick={()=>setIsActive(!isActive)}>
+        <div className="nav-menu" onClick={() => setIsActive(!isActive)}>
           <div className="nav-menu-item"></div>
           <div className="nav-menu-item"></div>
           <div className="nav-menu-item"></div>

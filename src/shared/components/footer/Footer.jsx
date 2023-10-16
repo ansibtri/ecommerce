@@ -1,6 +1,6 @@
 import Sociallinks from '../sociallinks/Sociallinks'
 import './footer.css'
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <>
@@ -48,7 +48,7 @@ const Footer = () => {
 
                 </div>
                 <div className="copyright-trademark">
-                    <p>© 2021 All rights reserved. <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a></p>
+                    <p>© 2021 All rights reserved. <Link to="#">Terms of use</Link> and <Link to="#">Privacy Policy</Link></p>
                 </div>
             </footer>
         </>

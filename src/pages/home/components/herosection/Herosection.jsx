@@ -10,7 +10,7 @@ const Herosection = () => {
                 <h1 className="herosection__content-title py-4">Summer Sale</h1>
                 <p className="herosection__content-tagline-2 py-4">50% OFF</p>
                 <p className='mb-4 herosection__description text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur libero cumque ex neque ipsum perspiciatis eum facere officia, sint modi minus reprehenderit saepe quas, iste autem debitis laboriosam? Eaque omnis minima sit illo perferendis qui laborum, recusandae commodi quaerat autem sint impedit, maiores maxime eum, tenetur vero reprehenderit totam ea!</p>
-                <Divider classes="mb-4"/>
+                <Divider classes="mb-4 normal" img="normal"/>
                 <div className="gap-5 herosection__bottom">
                     <p className="herosection__bottom-content">starting at <span>$199</span></p>
                 <button className="btn btn-primary herosection__button">SHOP NOW</button>

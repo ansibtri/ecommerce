@@ -1,0 +1,103 @@
+.filter-product{
+    padding: 0 20px;
+}
+/* filter section styling */
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.filter-product__head{
+    display:none;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/* filter button styling */
+.filter-content__button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px 20px;
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+.filter-content__button:hover{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.filter-product__head h4,
+.filter-container h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.filter-content .filter-price{
+    display: flex;
+    justify-content: space-between;
+}
+.filter-price label{
+    font-size: 1rem;
+}
+.filter-price span{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+input.price{
+    margin: 0 5px;
+    width: 70px;
+    max-width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+}
+.filter-category{
+        width: 100%;
+        max-width: 100px;
+        height: 30px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        outline: none;
+}
+.filter-container.active{
+    transform: scale(1);
+    height: auto;
+}
+@media screen and (max-width: 700px) {
+    .filter-product__head{
+        display: flex;
+    }
+    .filter-product{
+        width: 100%;
+    }
+    .filter-container{
+        transform: scale(0);
+        height: 0;
+    }
+    .shop-section__product{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+@media screen and (max-width: 576px) {
+    .shop-section__product{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shop-section{
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .shop-section__product{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
