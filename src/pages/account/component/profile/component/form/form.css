@@ -1,0 +1,14 @@
+.user-form-container div{
+    margin-bottom: 1rem;
+
+}
+.form-password-container{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 700px) {
+    .user-form-container .form-group{
+        grid-template-columns: 1fr !important;
+    }
+}

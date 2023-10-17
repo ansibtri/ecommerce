@@ -1,68 +1,30 @@
 import './tables.css'
-const Tables = () => {
-  return (
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>John</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Smith</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Peter</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Bob</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Tom</td>
-                <td>60</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>John</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Smith</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Peter</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Bob</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Tom</td>
-                <td>50</td>
-            </tr>
-        </tbody>
-    </table>
-  )
+const Tables = ({ columntitle, order }) => {
+    const title = columntitle.title;
+    return (
+        <table>
+            <thead>
+                <tr>
+                    {Array.from(title).map((item, index) => {
+                        return <th key={index}>{item}</th>
+                    })}
+                </tr>
+            </thead>
+            <tbody>
+                {order.map((item, index) => {
+                    const status = item["order_status"];
+                    return ( <tr key={index}>
+                        <td className='id'>{item["order_id"]}</td>
+                        <td className='order-date'>{item["order_date"]}</td>
+                        <td className={'order-status '+status.toLowerCase()}>{status}</td>
+                        <td className='order-total'>{item["order_total"]}</td>
+                        <td><button className='btn btn-primary-outline'>View</button></td>
+                    </tr>)
+                   
+                })}
+            </tbody>
+        </table>
+    )
 }
 
 export default Tables

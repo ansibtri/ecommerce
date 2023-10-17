@@ -4,7 +4,7 @@
     margin: 100px auto;
 }
 
-.container {
+.timeline-container {
     /* background-color: rgba(26, 25, 25, 0.3); */
     padding: 10px 50px;
     position: relative;
@@ -29,7 +29,7 @@
     left: 50%;
 }
 
-.container img {
+.timeline-container img {
     position: absolute;
     width: 40px;
     border-radius: 50%;
@@ -97,7 +97,7 @@
         margin: 50px;
     }
 
-    .container {
+    .timeline-container {
         padding: 10px 0 10px 50px;
         width: 100%;
     }
@@ -106,7 +106,7 @@
         left: 0;
     }
 
-    .container img {
+    .timeline-container img {
         position: absolute;
         width: 40px;
         border-radius: 50%;

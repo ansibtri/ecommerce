@@ -1,0 +1,48 @@
+.address-containers{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.address-container-card {
+    margin: 2rem 1rem 1rem 1rem;
+    border: 1px solid #ececec;
+}
+.address-container-head {
+    background-color: #e6e6e6;
+    padding: 1rem 1rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1rem;
+}
+.address-container-head h3,
+.address-container-form h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3d3a3a;
+    letter-spacing: 1.3px;
+    font-family: 'Poppins', sans-serif';
+}
+.address-container-head button{
+    background-color: #fff;
+    border: 1px solid #ececec;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.address-container-card p{
+    padding: 0 1rem 1rem 1rem;
+}
+.address-container-form{
+    margin: 1rem 1rem;
+}
+.address-container-form div{
+    margin: 1rem 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .address-containers{
+        grid-template-columns: 1fr;
+    }
+}

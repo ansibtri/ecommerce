@@ -1,19 +1,38 @@
-thead th{
-    background-color: #3434343f;
+table{
+    width: 100%;
 }
-tbody tr:nth-child(even){
-    background-color: #3434343f;
+tbody tr:nth-child(odd){
+    background-color: #ecececc9;
 }
 tbody tr td,
 thead th{
     text-align: center;
     font-size: 1rem;
-    font-family: Roboto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     padding: 10px;
     text-wrap: wrap;
+    border: 0;
 }
 tr td button{
-    border:none;
-    background-color: transparent;
-    font-size: 1.3rem;
+    padding: 8px 15px;
+    font-size: .9rem;
+    border: none !important;
+}tbody tr td.order-date,
+tbody tr td.order-total{
+    font-weight: 400;
+    color: #494949;
+}
+tbody tr td.order-status{
+    font-weight: 400;    
+    text-transform: capitalize;
+}
+tbody tr td.order-status.shipped{
+    color: #495bfd;
+}
+tbody tr td.order-status.pending{
+    color: #ecd610;
+}
+tbody tr td.order-status.delivered{
+    color: #27a701;
 }
