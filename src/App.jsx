@@ -12,6 +12,7 @@ import Contact from './pages/contact/Contact';
 import Shop from './pages/shop/Shop';
 import Blog from './pages/blog/Blog';
 import Notfound from './pages/notfound/Notfound';
+import Product from './pages/product/Product';
 
 // Account Pages Components 
 // import Dashboard from './pages/account/component/dashboard/Dashboard';
@@ -35,9 +36,10 @@ const App = () => {
           <Route path="/about" exact element={<About />} />
           <Route path="/contact" exact element={<Contact />} />
           <Route path="/shop" exact element={<Shop />} />
+          <Route path="/shop/:category" exact element={<Shop />} />
           <Route path="/blog" exact element={<Blog />} />
+          <Route path="/product" exact element={<Product />} />
           <Route path="*" element={<Notfound />} />
-
           {/* Nested Routing inside Account Component  */}
           <Route path="/account" exact element={<Account/>} />
           <Route exact path="/account/orders" element={<Account component={ <Orders />} />}/>

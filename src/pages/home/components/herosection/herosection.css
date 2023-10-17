@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Ananda Black';
-    src: url('./fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf');
+    src: url('/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf');
 }
 .herosection{
     background: var(--hero-image) no-repeat left center/cover;

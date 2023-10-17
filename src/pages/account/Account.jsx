@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Account = ({component}) => {
   return (
     <>
-      <Banner image={"./assets/01_Home13.jpg"} title="ACCOUNt" />
+      <Banner image={"/assets/01_Home13.jpg"} title="ACCOUNt" />
       <div className="user-panel">
         <div className="user-container">
           <div className="user-panel-left">

@@ -4,7 +4,7 @@ import Divider from '../../../../shared/components/divider/Divider'
 const Herosection = () => {
   return (
     <section>
-        <div className="display-grid herosection" style={{"--hero-image": "url('./assets/herosection-background.jpg')"}}>
+        <div className="display-grid herosection" style={{"--hero-image": "url('/assets/herosection-background.jpg')"}}>
             <div className="herosection__content p-5">
                 <p className='herosection__content-tagline'>New ecommerce experience</p>
                 <h1 className="herosection__content-title py-4">Summer Sale</h1>
