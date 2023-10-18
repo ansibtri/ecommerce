@@ -3,10 +3,8 @@ import { useParams } from 'react-router-dom'
 import './productdetails.css'
 import productsData from '../../../data/Products'
 const ProductDetails = () => {
-    console.log("h")
     // setting product quantity
     const [productQuantity, setProductQuantity] = useState({ "availableQuantity": 4, "quantity": 1 });
-    console.log(productQuantity)
     const onQuantityChange = (e) => {
         setProductQuantity({ ...productQuantity, "quantity": e.target.value });
     }
@@ -15,7 +13,7 @@ const ProductDetails = () => {
 
     // getting values from parameters
     const params = useParams();
-    
+
     // filtering data from productsData array that exactly matches the slug
     const product = productsData.filter((item) => {
         return item.product_slug === params.slug
@@ -38,7 +36,7 @@ const ProductDetails = () => {
                 <div className="product-details__head ">
                     <div className="product-details__head--title display-flex flex-row justify-content-space-between align-items-center">
                         <h1>{product["product_name"]}</h1>
-                        <button className='btn btn-primary-outline product-share-icon'><i class="fa-regular fa-share-from-square"></i></button>
+                        <button className='btn btn-primary-outline product-share-icon'><i className="fa-regular fa-share-from-square"></i></button>
                     </div>
                     <div className="product-details__head--mid">
                         <div className="product-details__head--mid--price">
@@ -65,10 +63,10 @@ const ProductDetails = () => {
                         <p>Color: <span></span></p>
                         <div className="display-flex flex-row align-items-center">
                             <div className="product-input p-1 yellow" onClick={setColor}>
-                                <label htmlFor="color"><input type="radio" checked name="color" id="black" value="black" data-color="black" />Black</label>
+                                <label htmlFor="color"><input type="radio" name="color" id="black" value="black" data-color="black" />Black</label>
                             </div>
                             <div className="product-input p-1 pink" onClick={setColor}>
-                                <label htmlFor="color"><input type="radio" checked name="color" id="pink" value="pink" data-color="pink" />Pink</label>
+                                <label htmlFor="color"><input type="radio" name="color" id="pink" value="pink" data-color="pink" />Pink</label>
                             </div>
                         </div>
                     </div>
@@ -76,10 +74,10 @@ const ProductDetails = () => {
                         <p>Size: <span></span></p>
                         <div className="display-flex flex-row align-items-center">
                             <div className="product-input p-1 yellow" onClick={setColor}>
-                                <label htmlFor="color"><input type="radio" checked name="color" id="black" value="black" data-color="black" />Black</label>
+                                <label htmlFor="color"><input type="radio" name="color" id="black" value="black" data-color="black" />Black</label>
                             </div>
                             <div className="product-input p-1 pink" onClick={setColor}>
-                                <label htmlFor="color"><input type="radio" checked name="color" id="pink" value="pink" data-color="pink" />Pink</label>
+                                <label htmlFor="color"><input type="radio" name="color" id="pink" value="pink" data-color="pink" />Pink</label>
                             </div>
                         </div>
                     </div>
@@ -99,11 +97,24 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <button className='btn btn-primary product-buy-btn'>Buy Now</button>
-                <p className='product__services'><i class="fa-solid fa-truck mr-3"></i> Estimated Delivery: <span>Oct 20 - 23, 2023</span></p>
+                <p className='product__services'><i className="fa-solid fa-truck mr-3"></i> Estimated Delivery: <span>Oct 20 - 23, 2023</span></p>
+                <div className="free-shipping-element">
+                    <div className="free-shipping-child">
+                    <img src="/assets/free-delivery.webp" alt="" />
+                    <p>Free Express Delivery</p>
+                    </div>
+                    <div className='free-shipping-child'>
+                        <img src="/assets/15-days.webp" alt="" />
+                        <p>15 Days Replacement Guarantee</p>
+                    </div>
+                    <div className="free-shipping-child">
+                    <img src="/assets/1-year.webp" alt="" />
+                         <p>1 Year Brand Warranty</p>
+                    </div>
+                </div>
             </div>
         </>
     )
-    return "h"
 }
 
 export default ProductDetails

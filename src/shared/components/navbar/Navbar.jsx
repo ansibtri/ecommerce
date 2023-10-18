@@ -18,7 +18,6 @@ const Navbar = () => {
               <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null}>Shop</Link></li>
               <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null}>About</Link></li>
               <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null}>Contact</Link></li>
-              <li><Link to="/blog" className={location.pathname === "/blog" ? 'active' : null}>blog</Link></li>
               <li><Link to="/cart" className={location.pathname === "/cart" ? 'active' : null}>Cart</Link></li>
             </ul>
           </div>

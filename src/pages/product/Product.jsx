@@ -14,6 +14,7 @@ const Product = () => {
           <ProductDetails />
         </div>
       </div>
+      
     </>
   )
 }
