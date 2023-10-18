@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/shop" exact element={<Shop />} />
           <Route path="/shop/:category" exact element={<Shop />} />
           <Route path="/blog" exact element={<Blog />} />
-          <Route path="/product" exact element={<Product />} />
+          <Route path="/product/:slug" exact element={<Product />} />
           <Route path="*" element={<Notfound />} />
           {/* Nested Routing inside Account Component  */}
           <Route path="/account" exact element={<Account/>} />

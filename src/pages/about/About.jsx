@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
     {/* // page banner component from src/shared/components/banner/Banner.jsx  */}
-    <Banner title="About" image="./assets/01_Home13.jpg"/>
+    <Banner title="About" image="/assets/01_Home13.jpg"/>
     {/* about us */}
     <div className="about-us">
       <div className="about-us__title">

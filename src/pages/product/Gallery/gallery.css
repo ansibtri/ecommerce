@@ -1,0 +1,4 @@
+.gallery img{
+    max-height: 450px;
+    object-fit: cover;
+}

@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <main>
-        <Banner title="Contact" image="./assets/creative_bg1.jpg"/>
+        <Banner title="Contact" image="/assets/creative_bg1.jpg"/>
             <h4 className='contact-title text-center'>GET IN TOUCH</h4>
         <div className="contact-us">
           <div className="contact-menu">
