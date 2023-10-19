@@ -1,5 +1,5 @@
 .product-details{
-    padding: 0 3rem;
+    padding: 0;
 }
 .product-details__head{
     padding-bottom:1rem 
@@ -242,6 +242,9 @@
 @media screen and (max-width: 850px) {
     .product-details__head .product-details__head--title{
         padding:1rem 0; 
+    }
+    .product-details{
+        padding: 0;
     }
 
 }

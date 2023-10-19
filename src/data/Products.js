@@ -60,7 +60,7 @@ const product = [
         "product_image": "/assets/11_1.jpg",
         "product_category":"women",
         "product_slug":"women-green-shirt-2",
-        "product_sale": 4
+        "product_sale": 0
     },
     {
         "product_id": 4,

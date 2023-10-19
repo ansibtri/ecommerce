@@ -9,7 +9,7 @@ const Product = ({product}) => {
             <img src={product["product_image"]} alt="product" />
         </div>
         <div className="product__info text-center">
-            <Link to="/shop" className='product__info--category'>{product["product_category"]}</Link>
+            <Link to={"/shop/"+product["product_category"]} className='product__info--category'>{product["product_category"]}</Link>
         <Link to={`/product/${product["product_slug"]}`} className="product__name">
             <h2 className='product__info--title'>{product["product_name"]}</h2>
               </Link>

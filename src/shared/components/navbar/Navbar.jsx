@@ -3,8 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 import Button from '../button/Button';
 const Navbar = () => {
+
+  const isLoggedIn = false;
+  // check location to make menu active when clicked
   const location = useLocation();
   const [isActive, setIsActive] = useState(false);
+  const disableNavbar = () => {
+    setIsActive(false)
+  }
   return (
     <nav className='nav'>
       <div className="navbar">
@@ -14,18 +20,18 @@ const Navbar = () => {
         <div className={isActive ? "nav-wrapper active" : "nav-wrapper"}>
           <div className="nav-list">
             <ul className="nav-list-menu">
-              <li><Link to="/" className={location.pathname === "/" ? 'active' : null}>Home</Link></li>
-              <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null}>Shop</Link></li>
-              <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null}>About</Link></li>
-              <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null}>Contact</Link></li>
-              <li><Link to="/cart" className={location.pathname === "/cart" ? 'active' : null}>Cart</Link></li>
+              <li><Link to="/" className={location.pathname === "/" ? 'active' : null} onClick={disableNavbar}>Home</Link></li>
+              <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null} onClick={disableNavbar}>Shop</Link></li>
+              <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null} onClick={disableNavbar}>About</Link></li>
+              <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null} onClick={disableNavbar}>Contact</Link></li>
+              <li><Link to="/cart" className={location.pathname === "/cart" ? 'active' : null}  onClick={disableNavbar}>Cart</Link></li>
             </ul>
           </div>
           <div className="nav-wrapper__button display-flex flex-row gap-2">
             <Link to="/shop" className="">
               <Button type="action" text="Shop" classes="btn-primary-outline" />
             </Link>
-            <Link to="/account" className="">
+            <Link to={isLoggedIn ? "/account":"/authenticate"} className="">
               <Button type="action" text="Account" classes="btn-primary" />
             </Link>
           </div>

@@ -4,7 +4,11 @@
     padding: 3rem 6rem;
     gap: 2rem;
 }
-
+.user-panel-left{
+    height: 243px;
+    position: sticky;
+    top:5px;
+}
 .user-panel-right{
     grid-column: 2 / 5;
 }

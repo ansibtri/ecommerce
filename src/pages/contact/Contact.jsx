@@ -27,7 +27,7 @@ const Contact = () => {
                 <Input type="text" name="lastname" label="Last Name" required="required"/>
                 <Input tyoe="email" name="email" label="Email" required="required"/>
                 <Input type="text" name="phone" label="Phone" required="required"/>
-                <Textarea name="description" required="true" label="Message:" cols="100" rows="7"/>
+                <Textarea name="description" label="Message" cols="100" rows="7"/>
               </div>
                 <button className='btn btn-primary contact-btn'>Submit</button>
             </div>

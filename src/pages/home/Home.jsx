@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import './home.css'
 import Badge from '../../shared/components/badge/Badge'
 import Divider from '../../shared/components/divider/Divider'
@@ -11,7 +12,9 @@ const Home = () => {
     <>
       <main>
         {/* Hero section  */}
+        <Suspense fallback={<h1>Loading</h1>}>
         <Herosection />
+        </Suspense>
 
         {/* Hero category  */}
         <Herocategory />

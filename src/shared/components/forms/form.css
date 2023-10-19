@@ -1,0 +1,43 @@
+
+.forms h1{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.forms p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #666;
+    letter-spacing: .9px;
+}
+.forms p span{
+    color: #080808;
+}
+.form-sign-forgot{
+    margin: .5rem 0;
+}
+.form-sign-forgot label{
+    color: #3f3d3d;
+}
+.form-sign-forgot input{
+    margin-right:.5rem;
+}
+.form-sign-forgot a{
+    padding: 1rem 0;
+    color: #0c0c0c;
+    letter-spacing: 1px;
+}
+.form-btn{
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    padding: .6rem 0;
+}
+.form-input{
+    margin-top: 1.5rem;
+
+}
+.form-group-sign{
+    grid-gap: 0 1rem;
+}

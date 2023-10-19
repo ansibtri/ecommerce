@@ -1,0 +1,7 @@
+.authenticate__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.authenticate__container .authenticate__form{
+    padding: 3rem 2rem;
+}
