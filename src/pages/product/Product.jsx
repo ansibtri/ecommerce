@@ -1,5 +1,5 @@
 import React from 'react'
-import Gallery from './gallery/Gallery'
+import Gallery from './Gallery/Gallery'
 import './product.css'
 import ProductDetails from './details/ProductDetails'
 import Review from './review/Review'
