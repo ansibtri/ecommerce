@@ -2,11 +2,14 @@ import React from 'react'
 import './form.css'
 import Login from './login/Login'
 import Signup from './signup/Signup'
-const Form = ({type}) => {
+import Accountrecover from './accountrecover/Accountrecover'
+const Form = ({modalType}) => {
+
   return (
     <>
-    {type === "login" ? <Login /> : null}
-    {type === "signup" ? <Signup /> : null}
+    {modalType === "login" ? <Login /> : null}
+    {modalType === "signup" ? <Signup /> : null}
+    {modalType === "accountrecover" ? <Accountrecover /> : null}
     </>
   )
 }

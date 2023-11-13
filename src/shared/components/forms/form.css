@@ -41,3 +41,10 @@
 .form-group-sign{
     grid-gap: 0 1rem;
 }
+.account-recovery{
+    color: #292727;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    font-size: 1rem;
+}

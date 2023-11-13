@@ -1,17 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
+import ModalContext from '../modal/modalContext/ModalContext';
 import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 import Button from '../button/Button';
-const Navbar = () => {
+import Modal from '../modal/Modal';
+import Form from '../forms/Form';
 
+const Navbar = () => {
+  const {showModal,setShowModal,modalType,setModalType} = useContext(ModalContext);
   const isLoggedIn = false;
   // check location to make menu active when clicked
-  const location = useLocation();
-  const [isActive, setIsActive] = useState(false);
+  const location = useLocation(); // useLocation() returns the location object that represents the current URL.
+  const [isActive, setIsActive] = useState(false); // disable navbar when clicked on link in mobile view
   const disableNavbar = () => {
     setIsActive(false)
   }
+  const handleModal = () => {
+    setShowModal(!showModal);
+    setModalType('login')
+  }
+  
   return (
+    <>
     <nav className='nav'>
       <div className="navbar">
         <div className="navbar-logo">
@@ -31,8 +41,8 @@ const Navbar = () => {
             <Link to="/shop" className="">
               <Button type="action" text="Shop" classes="btn-primary-outline" />
             </Link>
-            <Link to={isLoggedIn ? "/account":"/authenticate"} className="">
-              <Button type="action" text="Account" classes="btn-primary" />
+            <Link to={isLoggedIn ? "/account":handleModal} className="">
+              <Button type="button" text="Account" classes="btn-primary" action={isLoggedIn !== true ? handleModal:null}/>
             </Link>
           </div>
         </div>
@@ -43,37 +53,9 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    <Modal showModal={showModal} children={<Form modalType={modalType}/>} setModalType={setModalType} setShowModal={setModalType} />
+    </>
   )
 }
 
 export default Navbar;
-
-
-{/* <div className="navbar active">
-        <div className="nav-logo ">
-          <Link to="#" className="brand-logo">OnlinePasal</Link>
-        </div>
-        <div className="nav_wrapper">
-          <div className="display-flex flex-row align-items-center nav-list">
-            <ul className="display-flex flex-row justify-content-space-between w-100 align-items-center right hide-on-med-and-down">
-              <li><Link to="/" className={location.pathname === "/" ? 'active' : null}>Home</Link></li>
-              <li><Link to="/shop" className={location.pathname === "/shop" ? 'active' : null}>Shop</Link></li>
-              <li><Link to="/about" className={location.pathname === "/about" ? 'active' : null}>About</Link></li>
-              <li><Link to="/contact" className={location.pathname === "/contact" ? 'active' : null}>Contact</Link></li>
-            </ul>
-          </div>
-          <div className="nav-wrapper__button display-flex flex-row gap-2">
-            <a href="#" className="">
-              <Button type="action" text="Shop" classes="btn-primary-outline" />
-            </a>
-            <a href="#" className="">
-              <Button type="action" text="Account" classes="btn-primary" />
-            </a>
-          </div>
-        </div>
-        <div className="nav-menu" onClick={()=>setIsActive(!isActive)}>
-          <div className="nav-menu-item"></div>
-          <div className="nav-menu-item"></div>
-          <div className="nav-menu-item"></div>
-        </div>
-      </div> */}

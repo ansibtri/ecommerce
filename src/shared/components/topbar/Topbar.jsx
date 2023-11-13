@@ -3,6 +3,7 @@ import './topbar.css';
 import Sociallinks from '../sociallinks/Sociallinks';
 const Topbar = () => {
     return (
+        <>
         <div className='topbar'>
             <div className="display-flex flex-row justify-content-space-between align-items-center py-2">
                 <ul className="contact-list display-flex flex-row justify-content-space-even gap-3 w-75">
@@ -22,6 +23,7 @@ const Topbar = () => {
                 <Sociallinks classes="justify-content-center"/>
             </div>
         </div>
+        </>
     )
 }
 

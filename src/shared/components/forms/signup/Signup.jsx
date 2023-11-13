@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
 import Input from '../../inputs/Input'
-const Login = () => {
+import ModalContext from '../../modal/modalContext/ModalContext'
+const Signup = () => {
+  const {setModalType} = useContext(ModalContext);
   return (
     <div className="forms">
       <h1>Sign Up</h1>
-      <p>Already have an account yet? <span>Log In</span></p>
+      <p>Already have an account yet? <span style={{"cursor":"pointer"}} onClick={()=>{setModalType("login")}}>Login</span></p>
       <form>
         <div className="form-group">
           <div className="form-group-sign display-grid grid-2">
@@ -27,4 +29,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signup
